@@ -61,7 +61,7 @@ export async function addInvestment(investment: any) {
     owner: GITHUB_OWNER,
     repo: GITHUB_REPO,
     path: DATA_FILE,
-    message: `添加投资记录: ${investment.symbol} - ${investment.date}`,
+    message: `📈 新增投資記錄: ${investment.symbol} - W${investment.week} (${investment.date})`,
     content: content,
     sha: sha || undefined
   });
@@ -83,6 +83,7 @@ export async function deleteInvestment(id: string) {
   const content = Buffer.from(data.content, 'base64').toString('utf-8');
   let investments = JSON.parse(content);
   
+  const deletedInvestment = investments.find((inv: any) => inv.id === id);
   investments = investments.filter((inv: any) => inv.id !== id);
   
   const newContent = Buffer.from(JSON.stringify(investments, null, 2)).toString('base64');
@@ -91,7 +92,7 @@ export async function deleteInvestment(id: string) {
     owner: GITHUB_OWNER,
     repo: GITHUB_REPO,
     path: DATA_FILE,
-    message: `删除投资记录: ${id}`,
+    message: `🗑️ 刪除投資記錄: ${deletedInvestment?.symbol || id} - W${deletedInvestment?.week || '?'}`,
     content: newContent,
     sha: data.sha
   });
