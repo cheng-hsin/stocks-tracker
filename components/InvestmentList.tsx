@@ -46,26 +46,6 @@ export default function InvestmentList({ investments, onDelete, filter, setFilte
           ➕ 新增投資
         </button>
       </div>
-      <div className={homeStyles.filterTabs}>
-        <button
-          className={`${homeStyles.tabBtn} ${filter === 'all' ? homeStyles.active : ''}`}
-          onClick={() => setFilter('all')}
-        >
-          🌟 全部
-        </button>
-        <button
-          className={`${homeStyles.tabBtn} ${filter === 'us' ? homeStyles.active : ''}`}
-          onClick={() => setFilter('us')}
-        >
-          🇺🇸 美股
-        </button>
-        <button
-          className={`${homeStyles.tabBtn} ${filter === 'crypto' ? homeStyles.active : ''}`}
-          onClick={() => setFilter('crypto')}
-        >
-          ₿ 加密貨幣
-        </button>
-      </div>
       <div className={styles.investmentsList}>
       <div className={styles.tableHeader}>
         <div className={styles.tableCell}>週次</div>
