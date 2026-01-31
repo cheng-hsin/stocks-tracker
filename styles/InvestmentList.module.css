@@ -1,0 +1,228 @@
+.stockTable {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.stockHeader {
+  display: grid;
+  grid-template-columns: 120px 120px 80px 90px 120px;
+  background: #f8f9fa;
+  border-bottom: 2px solid #e0e0e0;
+  font-weight: 600;
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stockRow {
+  display: grid;
+  grid-template-columns: 120px 120px 80px 90px 120px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s;
+  font-size: 13px;
+}
+
+.stockRow:hover {
+  background: #f8f9fa;
+}
+
+.stockRow:last-child {
+  border-bottom: none;
+}
+
+.stockCell {
+  padding: 10px 8px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #f0f0f0;
+}
+
+.stockCell:last-child {
+  border-right: none;
+}
+
+.stockHeader .stockCell {
+  padding: 12px 8px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.stockHeader .stockCell:last-child {
+  border-right: none;
+}
+
+.investmentsList {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 60px 120px 100px 90px 80px 100px 60px;
+  background: #f8f9fa;
+  border-bottom: 2px solid #e0e0e0;
+  font-weight: 600;
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.investmentRow {
+  display: grid;
+  grid-template-columns: 60px 120px 100px 90px 80px 100px 60px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s;
+  font-size: 13px;
+}
+
+.investmentRow:hover {
+  background: #f8f9fa;
+}
+
+.investmentRow:last-child {
+  border-bottom: none;
+}
+
+.tableCell {
+  padding: 10px 8px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #f0f0f0;
+}
+
+.tableCell:last-child {
+  border-right: none;
+}
+
+.tableHeader .tableCell {
+  padding: 12px 8px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.tableHeader .tableCell:last-child {
+  border-right: none;
+}
+
+.symbol {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.profit {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.loss {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.btnDelete {
+  padding: 4px 8px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: inherit;
+  transition: all 0.2s;
+  width: 32px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnDelete:hover {
+  background: #c0392b;
+  transform: scale(1.1);
+}
+
+.typeBadge {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 3px;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.typeus {
+  background: #e3f2fd;
+  color: #1976d2;
+  border-color: #90caf9;
+}
+
+.typecrypto {
+  background: #f3e5f5;
+  color: #7b1fa2;
+  border-color: #ce93d8;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  background: #fafafa;
+  border: 1px dashed #e0e0e0;
+  border-radius: 8px;
+}
+
+.week {
+  font-weight: 600;
+  color: #666;
+  font-size: 12px;
+}
+
+.emptyState p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .tableHeader,
+  .investmentRow {
+    grid-template-columns: 80px 100px 90px 80px 80px 70px 90px 90px 110px 50px;
+    font-size: 12px;
+  }
+  
+  .stockHeader,
+  .stockRow {
+    grid-template-columns: 100px 100px 70px 80px 100px;
+    font-size: 12px;
+  }
+  
+  .tableCell,
+  .stockCell {
+    padding: 8px 6px;
+  }
+}
+
+@media (max-width: 968px) {
+  .investmentsList,
+  .stockTable {
+    overflow-x: auto;
+  }
+  
+  .tableHeader,
+  .investmentRow {
+    min-width: 900px;
+  }
+  
+  .stockHeader,
+  .stockRow {
+    min-width: 530px;
+  }
+}

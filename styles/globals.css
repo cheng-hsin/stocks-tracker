@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', '微軟正黑體', 'Microsoft JhengHei', 'Meiryo', sans-serif;
+  background: #fafafa;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#__next {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

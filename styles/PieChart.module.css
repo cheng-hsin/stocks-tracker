@@ -1,0 +1,50 @@
+.chartContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  height: 350px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.chartContainer:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.emptyChart {
+  text-align: center;
+  padding: 60px 40px;
+  color: #999;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border: 2px dashed #e0e0e0;
+  border-radius: 12px;
+}
+
+.emptyChart p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* 自定义 Chart.js 样式 */
+.chartContainer canvas {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+@media (max-width: 968px) {
+  .chartContainer {
+    height: 300px;
+    padding: 16px;
+  }
+}
